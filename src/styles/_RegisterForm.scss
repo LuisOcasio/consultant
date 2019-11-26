@@ -1,0 +1,36 @@
+.register-background {
+  width: 100%;
+  height: 90px;
+  margin-top: 10px;
+  @include flexCenter();
+  background-color: $color-4;
+  border-radius: 10px;
+}
+
+.register {
+  @include flexCenter();
+  * {
+    font-family: $font-5;
+  }
+  input {
+    border-radius: 5px;
+  }
+}
+
+.top-section {
+  @include flexCenter();
+  flex-direction: column;
+}
+
+form {
+  @include flexCenter();
+  flex-direction: column;
+}
+
+button {
+  margin: auto;
+  margin-top: 10px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: $color-6;
+}
