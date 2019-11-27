@@ -8,7 +8,7 @@ const RegisterForm = ({ errors, touched, isSubmitting }) => (
       <div className='register'>
         {touched.login && errors.login && <p>{errors.login}</p>}
         <Field type='login' name='login' placeholder='Login' />
-
+        <br></br>
         {touched.password && errors.password && <p>{errors.password}</p>}
         <Field type='password' name='password' placeholder='Password' />
       </div>

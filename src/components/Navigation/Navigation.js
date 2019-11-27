@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.png';
+import logo from '../../images/logo.png';
 
 const Navigation = () => {
   return (
@@ -9,7 +9,7 @@ const Navigation = () => {
         <Link to='/'>
           <img src={logo} alt='cannabis-plant' />
         </Link>
-        <Link to='/strains'>Strains</Link>
+        <Link to='/flower'>Flower</Link>
         <Link to='/edibles'>Edibles</Link>
       </nav>
     </div>

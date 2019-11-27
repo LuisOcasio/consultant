@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './styles/style.scss';
-import Navigation from './components/Navigation';
-import Home from './layout/Home';
-import Strains from './layout/Strains';
-import Edibles from './layout/Edibles';
+import Navigation from './components/Navigation/Navigation';
+import Home from './Pages/Home';
+import Flower from './Pages/Flower';
+import Edibles from './Pages/Edibles';
 
 const App = () => {
   return (
@@ -14,8 +14,8 @@ const App = () => {
         <Route path='/edibles'>
           <Edibles />
         </Route>
-        <Route path='/strains'>
-          <Strains />
+        <Route path='/Flower'>
+          <Flower />
         </Route>
         <Route path='/'>
           <Home />
