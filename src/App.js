@@ -7,7 +7,7 @@ import Edibles from './Pages/Edibles';
 
 const App = () => {
   return (
-    <div className='App'>
+    <div id='#wrapper'>
       <Navigation />
       <Switch>
         <Route path='/edibles'>
