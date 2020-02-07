@@ -1,13 +1,7 @@
 import React from 'react';
-import Formik from '../components/Register/Formik';
 
 const Home = () => {
-  return (
-    <div className='top-section'>
-      <div className='banner'></div>
-      <Formik />
-    </div>
-  );
+  return <div className='top-section'></div>;
 };
 
 export default Home;
