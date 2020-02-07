@@ -1,24 +1,15 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 
-const StrainTable = ({ key, id, flavors }) => {
+const StrainTable = ({ flavors }) => {
   return (
     <div className='strain-table'>
-      <Table responsive variant='dark'>
+      <Table striped bordered hover>
         <thead>
           <tr>
-            <th>id</th>
-            <th>race</th>
-            <th>flavors</th>
+            <th>{flavors}</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>{id}</td>
-            <td>{flavors}</td>
-            <td>{key}</td>
-          </tr>
-        </tbody>
       </Table>
     </div>
   );

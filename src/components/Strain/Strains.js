@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import StrainTable from './StrainTable';
 
-const Strains = ({ id, race, flavors }) => {
-  const [strains, setStrains] = useState();
-  console.log(strains);
+const Strains = () => {
+  const [strains, setStrains] = useState({});
+  console.log('Right here!', strains);
   useEffect(() => {
     Axios.get(`https://strainapi.evanbusse.com/N10bxoY/strains/search/all`)
       .then(res => {
         console.log(res.data);
-        setStrains({ data: res.data });
+        setStrains(res.data);
       })
       .catch(err => {
         console.error(err);
@@ -20,16 +20,14 @@ const Strains = ({ id, race, flavors }) => {
     return <div>Getting your strains...</div>;
   }
 
+  const vals = Object.keys(strains).map(key => strains[key]);
+  console.log();
   return (
-    <div>
-      {strains.map(strain => (
-        <StrainTable
-          key={strain.id}
-          race={strain.race}
-          flavors={strain.flavors}
-        />
+    <>
+      {vals.map(strain => (
+        <StrainTable flavors={strain.flavors} />
       ))}
-    </div>
+    </>
   );
 };
 
