@@ -9,6 +9,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+#wrapper {
+  width: 980px;
+  margin: auto;
+}
+
 body {
   background: #565977;
 }
@@ -133,5 +138,6 @@ button {
 
 .strain-table {
   margin-top: 10px;
+  width: 25%;
 }
 /*# sourceMappingURL=style.css.map */

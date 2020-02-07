@@ -2,9 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './styles/css/style.css';
 import Navigation from './components/Navigation/Navigation';
-import Home from './Pages/Home';
-import Flower from './Pages/Flower';
-import Edibles from './Pages/Edibles';
+import { Home, Edibles, Flower } from './Pages/index';
 
 const App = () => {
   return (
@@ -17,7 +15,7 @@ const App = () => {
         <Route path='/Flower'>
           <Flower />
         </Route>
-        <Route path='/'>
+        <Route exact path='/'>
           <Home />
         </Route>
       </Switch>
