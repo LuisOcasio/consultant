@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 
-const StrainTable = () => {
+const StrainTable = ({ flavor }) => {
   return (
     <div className='strain-table'>
       <Table responsive>
@@ -19,30 +19,30 @@ const StrainTable = () => {
         <tbody>
           <tr>
             <td>1</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
+            <td>{flavor}</td>
           </tr>
         </tbody>
       </Table>

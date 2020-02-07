@@ -10,7 +10,7 @@ const Strains = () => {
   useEffect(() => {
     Axios.get(API)
       .then(res => {
-        // console.log(res.data);
+        console.log(res.data);
         setStrains(res.data);
       })
       .catch(err => {
@@ -28,7 +28,7 @@ const Strains = () => {
   return (
     <>
       {vals.map(strain => (
-        <StrainTable />
+        <StrainTable key={strain.flavor} />
       ))}
     </>
   );
