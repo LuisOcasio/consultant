@@ -1,10 +1,10 @@
-import React from 'react';
-import './index.scss';
-import { Home } from './Pages/index';
+import React from "react";
+import "./index.scss";
+import { Home } from "./components/index";
 
 const App = () => {
   return (
-    <div id='#wrapper'>
+    <div id="#wrapper">
       <Home />
     </div>
   );
