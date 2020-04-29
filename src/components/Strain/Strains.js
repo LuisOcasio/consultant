@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import axios from "axios";
 import StrainFlavor from "./StrainFlavor";
 
 const Strains = () => {
@@ -8,7 +8,8 @@ const Strains = () => {
   useEffect(() => {
     const Data = `http://strainapi.evanbusse.com/${process.env.REACT_APP_KEY}/searchdata/flavors`;
 
-    Axios.get(Data)
+    axios
+      .get(Data)
       .then((res) => {
         console.log("show me data!", res.data);
         setStrains(res.data);
