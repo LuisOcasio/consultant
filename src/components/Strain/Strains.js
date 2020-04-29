@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
-import StrainTable from './StrainTable';
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
+import StrainFlavor from "./StrainFlavor";
 
 const Strains = () => {
-  const [strains, setStrains] = useState({});
-
-  const API = process.env.REACT_APP_KEY;
+  const [strains, setStrains] = useState([]);
 
   useEffect(() => {
-    Axios.get(API)
-      .then(res => {
-        console.log(res.data);
+    const Data = `http://strainapi.evanbusse.com/${process.env.REACT_APP_KEY}/searchdata/flavors`;
+
+    Axios.get(Data)
+      .then((res) => {
+        console.log("show me data!", res.data);
         setStrains(res.data);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
       });
   }, []);
@@ -22,14 +22,11 @@ const Strains = () => {
     return <div>Getting your strains...</div>;
   }
 
-  const vals = Object.keys(strains).map(key => strains[key]);
-  console.log('check me out', strains);
-
   return (
     <>
-      {vals.map(strain => (
-        <StrainTable key={strain.flavor} />
-      ))}
+      {strains.map((e) => {
+        return <StrainFlavor key={e} flavor={e} />;
+      })}
     </>
   );
 };
