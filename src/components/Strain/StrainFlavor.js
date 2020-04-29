@@ -1,14 +1,13 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const StrainFlavor = (props) => {
+const StrainFlavor = ({ flavor }) => {
   return (
-    <div>
+    <>
       <Card style={{ width: "18rem" }}>
-        <Card.Header>{props.flavor}</Card.Header>
-        <Card.Body>Body</Card.Body>
+        <Card.Header>{flavor}</Card.Header>
       </Card>
-    </div>
+    </>
   );
 };
 

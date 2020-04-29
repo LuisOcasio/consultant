@@ -1,15 +1,12 @@
 import React from "react";
 import "./index.scss";
 import { Home } from "./components/index";
-import Strains from "./components/Strain/Strains";
-import StrainFlavor from "./components/Strain/StrainFlavor";
+import { Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div id="#wrapper">
-      <Home />
-      <Strains />
-      <StrainFlavor />
+      <Route path="/" component={Home} />
     </div>
   );
 };
