@@ -10,12 +10,26 @@ const Login = () => {
     <>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <input
+          style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            width: "10rem",
+            height: "1.7rem",
+            fontSize: "1rem",
+          }}
           name="username"
           ref={register({ required: true })}
           placeholder="username"
         />
         {errors.exampleRequired && <span>username required</span>}
         <input
+          style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            width: "10rem",
+            height: "1.7rem",
+            fontSize: "1rem",
+          }}
           name="exampleRequired"
           ref={register({ required: true })}
           placeholder="password"
@@ -27,7 +41,8 @@ const Login = () => {
             border: "none",
             backgroundColor: "#fff",
             color: "grey",
-            width: "225px",
+            width: "10rem",
+            height: "1.7rem",
             borderRadius: "5px",
             fontSize: "1rem",
           }}
