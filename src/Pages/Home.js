@@ -1,14 +1,24 @@
 import React from "react";
-import { Navigation } from "../components/index";
-import Strains from "../components/Strain/Strains";
+import styled from "styled-components";
+import Login from "../components/Login";
+import banner from "../images/marijuana-fruit.jpg";
 
 const Home = () => {
   return (
-    <div className="top-section">
-      <Navigation />
-      <Strains />
-    </div>
+    <Wrapper>
+      <Login />
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  display: flex;
+  padding: 2rem;
+  background-image: url(${banner});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 2rem;
+`;
 
 export default Home;

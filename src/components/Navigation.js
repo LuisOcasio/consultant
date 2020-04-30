@@ -12,7 +12,7 @@ const Navigation = () => {
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/">Features</Nav.Link>
-          <Nav.Link href="/">Pricing</Nav.Link>
+          <Nav.Link href="/flavors">Flavors</Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
