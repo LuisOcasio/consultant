@@ -57,18 +57,15 @@ const Home = () => {
 
   return (
     <>
-      <Wrapper>
+      <Banner>
         <Login />
-      </Wrapper>
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+      </Banner>
+      <MyVerticallyCenteredModal show={modalShow} />
     </>
   );
 };
 
-const Wrapper = styled.div`
+const Banner = styled.div`
   display: flex;
   padding: 2rem;
   background-image: url(${banner});
@@ -76,6 +73,7 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   margin-top: 2rem;
+  justify-content: flex-end;
 `;
 
 export default Home;
