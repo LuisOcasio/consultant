@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Modal, Button, InputGroup } from "react-bootstrap";
-
 import styled from "styled-components";
 import Login from "../components/Login";
 import banner from "../images/marijuana-fruit.jpg";

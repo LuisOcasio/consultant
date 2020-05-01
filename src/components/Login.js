@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import { gsap } from "gsap";
 
 const Login = () => {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => console.log(data);
 
+  const animate = React.createRef();
+
+  useEffect(() => {
+    gsap.to(animate.current, {
+      x: 600,
+      rotation: 360,
+      scale: 0.5,
+    });
+  }, [animate]);
+
   return (
     <>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)} ref={animate}>
         <input
           style={{
             textAlign: "center",
@@ -59,7 +70,7 @@ const Form = styled.div`
   flex-direction: column;
   background-color: #eff3c6;
   width: 250px;
-  height: 300px;
+  height: 250px;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
